@@ -241,7 +241,7 @@
                                 <rect key="frame" x="232" y="221" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections><action destination="9OP-vr-cWr" id="n3g-w6-YtJ" selector="navigateToUIViewController3:" eventType="touchUpInside"></action>
+                                <connections><action destination="9OP-vr-cWr" id="n3g-w6-YtJ" selector="navigateToViewController0:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                         </subviews>
@@ -256,7 +256,7 @@
         <!--UIViewController-->
         <scene sceneID="9Ox-Y9-RN7">
             <objects>
-                <viewController title="UIViewController" id="xmy-Mg-sje" sceneMemberID="viewController" storyboardIdentifier="UIViewController3">
+                <viewController title="UIViewController" id="xmy-Mg-sje" customClass="ViewController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="ViewController0">
                     <view key="view" contentMode="scaleToFill" id="Xha-rA-oUU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -271,7 +271,7 @@
         <!--UIViewController-->
         <scene sceneID="9Ox-Y9-RN7">
             <objects>
-                <viewController title="UIViewController" id="xmy-Mg-sje" sceneMemberID="viewController">
+                <viewController title="UIViewController" id="xmy-Mg-sje" customClass="ViewController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xha-rA-oUU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -126,6 +126,64 @@ class CustomRegex: NSRegularExpression {
     }
 }
 
+/// Inserts instantiate methods into the project, supports multiple scenes per one VC
+class InstantiateBuilder {
+    var dict: [String: [ViewControllerSceneContent]] = [:]
+    
+    func getMethodName(scene: ViewControllerSceneContent) -> String {
+        var scenes = dict[scene.viewControllerClass] ?? []
+        
+        let index: Int
+        
+        if let found = scenes.firstIndex(where: { $0 === scene}) {
+            index = found
+        } else {
+            index = scenes.count
+            scenes.append(scene)
+            dict[scene.viewControllerClass] = scenes
+        }
+        
+        _ = index
+        
+        var suffix = ""
+        
+        if scene.viewControllerClass == "UIViewController" {
+            suffix = "VC"
+        }
+        
+        if scene.viewControllerClass.hasSuffix("NavigationController") {
+            suffix = "With"
+        }
+        
+        var identifier = scene.storyboardIdentifier!
+        identifier = identifier.replacingOccurrences(of: scene.viewControllerClass, with: "")
+        identifier = identifier.replacingOccurrences(of: "0", with: "")
+        identifier = "instantiate" + suffix + identifier + "()"
+        
+        return identifier
+    }
+    
+    func getMethodCall(scene: ViewControllerSceneContent) -> String {
+        return scene.viewControllerClass + "." + getMethodName(scene: scene)
+    }
+    
+    func insertExtensions(writer: SourceWriter) {
+        for (name, scenes) in dict {
+            writer.beginExtension(name: name)
+            
+            for scene in scenes {
+                writer.append("static func \(getMethodName(scene: scene)) -> Self {")
+                writer.begin()
+                writer.append("return instantiate(identifier: \"\(scene.storyboardIdentifier!)\", storyboardName: \"\(scene.storyboardName)\")")
+                writer.end()
+                writer.append("}")
+            }
+            
+            writer.endExtension()
+        }
+    }
+}
+
 class SegueNodeWorker {
     let segue: SegueNode
     let model: BundleModel
@@ -141,9 +199,10 @@ class SegueNodeWorker {
     
     var methodName: String = ""
     var destinationResolved: ViewControllerSceneContent?
-    var vcClass = ""
+    var destinationInstantiate: String = "<UNKNOWN>"
+    var vcClass = "<UNKNOWN>"
     
-    func resolve() {
+    func resolve(instantiator: InstantiateBuilder) {
         func getMethodName(from segueIdentifier: String) -> String {
             var name = segueIdentifier.capitalizedCharacter(at: 0)
             name = name.replacingOccurrences(of: " ", with: "_")
@@ -158,6 +217,10 @@ class SegueNodeWorker {
         vcClass = segue.parent?.customClass ?? segue.parent?.viewControllerClass ?? fallback()
         destinationResolved = try? model.locateDestination(segue: segue)
         methodName = getMethodName(from: segue.identifier ?? getAlternativeName())
+        
+        if let destination = destinationResolved {
+            destinationInstantiate = instantiator.getMethodCall(scene: destination)
+        }
     }
     
     func getAlternativeName() -> String {
@@ -231,7 +294,7 @@ class SegueNodeWorker {
                 storyboardIdentifier = "nil"
             }
             
-            writer.append("let vc = \(d.viewControllerClass).instantiate(identifier: \(storyboardIdentifier), storyboardName: \"\(d.storyboardName)\")")
+            writer.append("let vc = \(destinationInstantiate)")
             
             if segue.kind == .presentation {
                 func setStyle(name: String) {
@@ -292,6 +355,7 @@ class SegueConverter {
     let model: BundleModel
     let writer: SourceWriter
     
+    let instantiator = InstantiateBuilder()
     var workers: [SegueNodeWorker] = []
     
     init(projectURL: URL) {
@@ -322,6 +386,8 @@ class SegueConverter {
         
         removeDuplicates()
         resolveDestinations()
+        
+        instantiator.insertExtensions(writer: writer)
         insertExtensions()
         
         for storyboard in model.storyboards {
@@ -350,7 +416,7 @@ class SegueConverter {
     
     func resolveDestinations() {
         for s in workers {
-            s.resolve()
+            s.resolve(instantiator: instantiator)
         }
     }
     
