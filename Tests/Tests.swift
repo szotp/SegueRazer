@@ -10,8 +10,6 @@ import XCTest
 import SegueRazerKit
 
 class Tests: XCTestCase {
-    var shouldTryToBuild = true
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,35 +20,30 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testTestProjects() {
+    func testConvertTestProject() {
         let fm = FileManager.default
-        let testProjectsURL = ProjectDirectory.get().appendingPathComponent("TestProjects")
-        assert(fm.fileExists(atPath: testProjectsURL.path))
+        let originalURL = ProjectDirectory.get().appendingPathComponent("TestProjects").appendingPathComponent("Simple")
+        let convertedURL = originalURL.renamed(newName: "SimpleConverted")
         
-        let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("SegueRazer")
-        try? fm.removeItem(at: url)
-        try! fm.copyItem(at: testProjectsURL, to: url)
+        assert(fm.fileExists(atPath: originalURL.path))
+        try? fm.removeItem(at: convertedURL)
+        try! fm.copyItem(at: originalURL, to: convertedURL)
         
-        for dir in try! fm.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: []) {
-            let path = dir.path
-            if dir.isHidden {
-                continue
-            }
-            
-            print("RUNNING: " + path)
-            let tool = SegueRazer()
-            tool.projectURL.value = dir
-            tool.execute()
-            
-            if shouldTryToBuild {
-                let code = shell(launchPath: "/usr/bin/xcodebuild", "CODE_SIGNING_ALLOWED=NO")
-                XCTAssertEqual(code, 0)
-            }
-            
-            print("ok")
-        }
+        print("RUNNING: " + originalURL.path)
+        let tool = SegueRazer()
+        tool.projectURL.value = convertedURL
+        tool.execute()
+        
+        let code = shell(launchPath: "/usr/bin/xcodebuild", "CODE_SIGNING_ALLOWED=NO")
+        XCTAssertEqual(code, 0)
     }
+}
 
+extension URL {
+    func renamed(newName: String) -> URL {
+        assert(isFileURL)
+        return deletingLastPathComponent().appendingPathComponent(newName)
+    }
 }
 
 private extension URL {

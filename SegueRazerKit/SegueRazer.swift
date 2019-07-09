@@ -26,6 +26,11 @@ public struct SegueRazer: CommandProtocol {
         defaultValue: true
     )
     
+    public let reset = Arg<Bool>(
+        helper: "(DANGER) Resets git state to latest commit. Useful for testing.",
+        defaultValue: false
+    )
+    
     public func validate() throws {
         if !FileManager.default.fileExists(atPath: projectURL.value.path) {
             throw ParsingError(message: "Project does not exist")
@@ -36,9 +41,12 @@ public struct SegueRazer: CommandProtocol {
         let projectURL = self.projectURL.value
         
         FileManager.default.changeCurrentDirectoryPath(projectURL.path)
-        shell("git", "reset", "--hard")
-        shell("git", "clean", "-f", "-d")
-        shell("git", "status")
+        if reset.value {
+            shell("git", "reset", "--hard")
+            shell("git", "clean", "-f", "-d")
+            shell("git", "status")
+        }
+
         
         let converter = SegueConverter(projectURL: projectURL)
         converter.SegueRazers()

@@ -5,10 +5,10 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:SegueRazer.xcodeproj">
+      location = "group:TestProjects/Simple/TestProject.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/pszot/Documents/Projects/SegueRazer/TestProjects/Simple/TestProject.xcodeproj">
+      location = "group:SegueRazer.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HId-4I-qXC">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HId-4I-qXC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="ViewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,24 +21,21 @@
                                 <rect key="frame" x="59" y="87" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show"/>
-                                <connections>
-                                    <segue destination="cJ7-Hq-on6" kind="show" identifier="Show" id="HWN-Zc-HYn"/>
+                                <connections><action destination="BYZ-38-t0r" id="HWN-Zc-HYn" selector="navigateToShow:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh9-fA-f9n">
                                 <rect key="frame" x="59" y="139" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ShowDetail"/>
-                                <connections>
-                                    <segue destination="cJ7-Hq-on6" kind="showDetail" identifier="ShowDetail" id="nMR-b7-PlI"/>
+                                <connections><action destination="BYZ-38-t0r" id="nMR-b7-PlI" selector="navigateToShowDetail:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqo-dR-an0">
                                 <rect key="frame" x="59" y="177" width="107" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="PresentModally"/>
-                                <connections>
-                                    <segue destination="fMw-I1-9k8" kind="presentation" identifier="PresentModally" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="5cp-wr-A8G"/>
+                                <connections><action destination="BYZ-38-t0r" id="5cp-wr-A8G" selector="navigateToPresentModally:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfJ-ff-WPX">
@@ -54,34 +50,28 @@
                                 <rect key="frame" x="59" y="253" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Popover"/>
-                                <connections>
-                                    <segue destination="zBe-u6-SoS" kind="popoverPresentation" popoverAnchorView="AFm-lJ-YGd" id="Cmz-mB-bff">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                <connections><action destination="BYZ-38-t0r" id="Cmz-mB-bff" selector="navigateToUIViewController1:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5L-x0-6vs">
                                 <rect key="frame" x="69" y="354" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Table"/>
-                                <connections>
-                                    <segue destination="nDB-8t-45s" kind="show" id="Ptc-gy-aNt"/>
+                                <connections><action destination="BYZ-38-t0r" id="Ptc-gy-aNt" selector="navigateToUITableViewController:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdF-jR-UZi">
                                 <rect key="frame" x="32" y="417" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="CollectionView"/>
-                                <connections>
-                                    <segue destination="2ax-aG-h51" kind="show" id="dmd-CU-TN7"/>
+                                <connections><action destination="BYZ-38-t0r" id="dmd-CU-TN7" selector="navigateToCollectionViewController:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvC-Pi-dq7">
                                 <rect key="frame" x="61" y="310" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Custom"/>
-                                <connections>
-                                    <segue destination="cJ7-Hq-on6" kind="custom" customClass="CustomSegue" customModule="TestProject" customModuleProvider="target" id="e34-bO-5Vj"/>
+                                <connections><action destination="BYZ-38-t0r" id="e34-bO-5Vj" selector="navigateToUIViewController0:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,7 +80,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="sjr-j1-tj9"/>
                     <connections>
-                        <segue destination="cJ7-Hq-on6" kind="show" identifier="Programmatic" id="QvM-LT-jaN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,7 +89,7 @@
         <!--Table View Controller-->
         <scene sceneID="tUi-if-e5E">
             <objects>
-                <tableViewController id="nDB-8t-45s" sceneMemberID="viewController">
+                <tableViewController id="nDB-8t-45s" sceneMemberID="viewController" storyboardIdentifier="UITableViewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XeR-Xy-VdB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,8 +106,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <segue destination="zBe-u6-SoS" kind="show" id="3Tx-fJ-Qn5"/>
-                                        </connections>
+                                        </connections><userDefinedRuntimeAttributes><userDefinedRuntimeAttribute type="string" keyPath="segueSelector" value="navigateToUIViewController1:"></userDefinedRuntimeAttribute></userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -136,7 +124,7 @@
         <!--Collection View Controller-->
         <scene sceneID="0ag-cc-2R9">
             <objects>
-                <collectionViewController id="2ax-aG-h51" customClass="CollectionViewController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="2ax-aG-h51" customClass="CollectionViewController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="CollectionViewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="K2A-ha-oYq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,8 +145,7 @@
                                 </view>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="zBe-u6-SoS" kind="show" id="HCu-w1-egU"/>
-                                </connections>
+                                </connections><userDefinedRuntimeAttributes><userDefinedRuntimeAttribute type="string" keyPath="segueSelector" value="navigateToUIViewController1:"></userDefinedRuntimeAttribute></userDefinedRuntimeAttributes>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -174,7 +161,7 @@
         <!--UIViewController-->
         <scene sceneID="0as-ZK-ZKF">
             <objects>
-                <viewController title="UIViewController" id="cJ7-Hq-on6" sceneMemberID="viewController">
+                <viewController title="UIViewController" id="cJ7-Hq-on6" sceneMemberID="viewController" storyboardIdentifier="UIViewController0">
                     <view key="view" contentMode="scaleToFill" id="o9Q-p4-xDX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,8 +170,7 @@
                                 <rect key="frame" x="213" y="222" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="9OP-vr-cWr" kind="show" id="UlM-f1-Ft6"/>
+                                <connections><action destination="cJ7-Hq-on6" id="UlM-f1-Ft6" selector="navigateToObjCViewController:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,7 +185,7 @@
         <!--View Controller-->
         <scene sceneID="wrX-LE-XDp">
             <objects>
-                <viewController id="zBe-u6-SoS" sceneMemberID="viewController">
+                <viewController id="zBe-u6-SoS" sceneMemberID="viewController" storyboardIdentifier="UIViewController1">
                     <view key="view" contentMode="scaleToFill" id="5Mu-Yv-Sec">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,7 +200,7 @@
         <!--Custom Navigation Controller-->
         <scene sceneID="TCx-yh-HJ0">
             <objects>
-                <navigationController id="fMw-I1-9k8" customClass="CustomNavigationController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="fMw-I1-9k8" customClass="CustomNavigationController" customModule="TestProject" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="CustomNavigationControllerUIViewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cgw-zq-Yc6" customClass="CustomNavigationBar" customModule="TestProject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -230,7 +216,7 @@
         <!--View Controller-->
         <scene sceneID="0JS-7R-SWV">
             <objects>
-                <viewController id="6mm-B2-wQz" sceneMemberID="viewController">
+                <viewController id="6mm-B2-wQz" sceneMemberID="viewController" storyboardIdentifier="UIViewController2">
                     <view key="view" contentMode="scaleToFill" id="vK1-v7-zyY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,7 +232,7 @@
         <!--ObjCViewController-->
         <scene sceneID="j9l-nE-QHg">
             <objects>
-                <viewController title="ObjCViewController" id="9OP-vr-cWr" customClass="ObjCViewController" sceneMemberID="viewController">
+                <viewController title="ObjCViewController" id="9OP-vr-cWr" customClass="ObjCViewController" sceneMemberID="viewController" storyboardIdentifier="ObjCViewController">
                     <view key="view" contentMode="scaleToFill" id="862-ds-0eF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,8 +241,7 @@
                                 <rect key="frame" x="232" y="221" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="xmy-Mg-sje" kind="show" id="n3g-w6-YtJ"/>
+                                <connections><action destination="9OP-vr-cWr" id="n3g-w6-YtJ" selector="navigateToUIViewController3:" eventType="touchUpInside"></action>
                                 </connections>
                             </button>
                         </subviews>
@@ -271,7 +256,7 @@
         <!--UIViewController-->
         <scene sceneID="9Ox-Y9-RN7">
             <objects>
-                <viewController title="UIViewController" id="xmy-Mg-sje" sceneMemberID="viewController">
+                <viewController title="UIViewController" id="xmy-Mg-sje" sceneMemberID="viewController" storyboardIdentifier="UIViewController3">
                     <view key="view" contentMode="scaleToFill" id="Xha-rA-oUU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,7 +271,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nve-iq-yB2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HId-4I-qXC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HId-4I-qXC" sceneMemberID="viewController" storyboardIdentifier="UINavigationControllerViewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aLb-Ck-3H8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -303,7 +288,5 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HCu-w1-egU"/>
-        <segue reference="e34-bO-5Vj"/>
     </inferredMetricsTieBreakers>
 </document>

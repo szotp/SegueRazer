@@ -23,3 +23,15 @@ class CustomSegue: UIStoryboardSegue {
         print("Custom segue")
     }
 }
+
+extension CollectionViewController {
+  @IBAction func navigateToUIViewController1(_ sender: Any?) {
+    //<segue destination="zBe-u6-SoS" kind="show" id="HCu-w1-egU"/>
+    let vc = UIViewController.instantiate(identifier: "UIViewController1", storyboardName: "Main")
+    _ = tempPrepareSegue(identifier: "", destination: vc, sender: sender)
+    _ = tempPrepareSegue(identifier: "", destination: vc, sender: sender)
+    show(vc, sender: self)
+  }
+
+}
+
