@@ -1,0 +1,852 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F05EFE022D1A9F800553F89 /* SegueRazer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F05EFDE22D1A9F800553F89 /* SegueRazer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F05EFE322D1A9F800553F89 /* SegueRazerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F05EFDC22D1A9F800553F89 /* SegueRazerKit.framework */; };
+		1F05EFE422D1A9F800553F89 /* SegueRazerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F05EFDC22D1A9F800553F89 /* SegueRazerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F05EFE922D1AA0F00553F89 /* SegueRazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7DBF6E20A578B500BDAA4B /* SegueRazer.swift */; };
+		1F05EFEA22D1AA0F00553F89 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BADAC20A43ED100F940C4 /* Utility.swift */; };
+		1F05EFEB22D1AA0F00553F89 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9BADAA20A43A1B00F940C4 /* Model.swift */; };
+		1F05EFF922D1AA8400553F89 /* SegueRazerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F05EFDC22D1A9F800553F89 /* SegueRazerKit.framework */; };
+		1F05EFFF22D1AC8C00553F89 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36710621020F6100E441DA /* Tests.swift */; };
+		1FD6ACD820A3048000588105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD6ACD720A3048000588105 /* Assets.xcassets */; };
+		1FD6ACE420A3049F00588105 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD6ACE320A3049F00588105 /* main.swift */; };
+		1FDA98CE22D1D36900AAF5D6 /* SeguesSupport.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F7DBF6620A5688400BDAA4B /* SeguesSupport.swift */; };
+		1FEEAD2022D264C000787A4A /* ProjectDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEAD1F22D264C000787A4A /* ProjectDirectory.m */; };
+		1FEEAD2422D2710F00787A4A /* DebuggingEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEAD2322D2710F00787A4A /* DebuggingEncodable.swift */; };
+		1FEEAD2522D2756000787A4A /* CommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEAD1B22D2615500787A4A /* CommandHandler.swift */; };
+		1FFDFF6122D1D2D00049C885 /* SeguesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7DBF6620A5688400BDAA4B /* SeguesSupport.swift */; };
+		300B174587E8C13D51D23F8C /* Pods_SegueRazerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 959B347DBF389FB5DB2D1AD3 /* Pods_SegueRazerKit.framework */; };
+		814C2520AF2169C8503B714E /* Pods_SegueRazerKit_SegueRazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220321FFF6BB23B1C9EE9C5F /* Pods_SegueRazerKit_SegueRazer.framework */; };
+		A4CC3F51E8DB72A86A177F7B /* Pods_SegueRazerKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC57E9A48C2496C78EAF598 /* Pods_SegueRazerKit_Tests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F05EFE122D1A9F800553F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FD6ACCA20A3048000588105 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F05EFDB22D1A9F800553F89;
+			remoteInfo = RemoveSegueKit;
+		};
+		1F05EFFA22D1AA8400553F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FD6ACCA20A3048000588105 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F05EFDB22D1A9F800553F89;
+			remoteInfo = RemoveSegueKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F05EFE822D1A9F800553F89 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F05EFE422D1A9F800553F89 /* SegueRazerKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDA98CD22D1D35E00AAF5D6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				1FDA98CE22D1D36900AAF5D6 /* SeguesSupport.swift in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1303A24ED6AE88617315F9BB /* Pods-SegueRazerKit-SegueRazer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueRazerKit-SegueRazer.debug.xcconfig"; path = "Target Support Files/Pods-SegueRazerKit-SegueRazer/Pods-SegueRazerKit-SegueRazer.debug.xcconfig"; sourceTree = "<group>"; };
+		1C83E64ADDCD2DC35AAEF05F /* Pods-SegueRazerKit-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueRazerKit-Tests.release.xcconfig"; path = "Target Support Files/Pods-SegueRazerKit-Tests/Pods-SegueRazerKit-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1F05EFDC22D1A9F800553F89 /* SegueRazerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SegueRazerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F05EFDE22D1A9F800553F89 /* SegueRazer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegueRazer.h; sourceTree = "<group>"; };
+		1F05EFDF22D1A9F800553F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F05EFF422D1AA8400553F89 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F36710621020F6100E441DA /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		1F36710821020F6100E441DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F7DBF6620A5688400BDAA4B /* SeguesSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguesSupport.swift; sourceTree = "<group>"; };
+		1F7DBF6E20A578B500BDAA4B /* SegueRazer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueRazer.swift; sourceTree = "<group>"; };
+		1F9BADAA20A43A1B00F940C4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1F9BADAC20A43ED100F940C4 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		1FD6ACD220A3048000588105 /* SegueRazer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueRazer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FD6ACD720A3048000588105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FD6ACDC20A3048000588105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD6ACE320A3049F00588105 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1FEEAD1B22D2615500787A4A /* CommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandHandler.swift; sourceTree = "<group>"; };
+		1FEEAD1D22D264C000787A4A /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1FEEAD1E22D264C000787A4A /* ProjectDirectory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectDirectory.h; sourceTree = "<group>"; };
+		1FEEAD1F22D264C000787A4A /* ProjectDirectory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectDirectory.m; sourceTree = "<group>"; };
+		1FEEAD2322D2710F00787A4A /* DebuggingEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingEncodable.swift; sourceTree = "<group>"; };
+		220321FFF6BB23B1C9EE9C5F /* Pods_SegueRazerKit_SegueRazer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueRazerKit_SegueRazer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2300C419FC4ED828C2B617B7 /* Pods-SegueRazerKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueRazerKit.release.xcconfig"; path = "Target Support Files/Pods-SegueRazerKit/Pods-SegueRazerKit.release.xcconfig"; sourceTree = "<group>"; };
+		27E9D39D6D447B7C7390C395 /* Pods-SegueRazerKit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueRazerKit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-SegueRazerKit-Tests/Pods-SegueRazerKit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3BC57E9A48C2496C78EAF598 /* Pods_SegueRazerKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueRazerKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D8B1A06763A54302754E327 /* Pods-SegueRazerKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueRazerKit.debug.xcconfig"; path = "Target Support Files/Pods-SegueRazerKit/Pods-SegueRazerKit.debug.xcconfig"; sourceTree = "<group>"; };
+		959B347DBF389FB5DB2D1AD3 /* Pods_SegueRazerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueRazerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AC6669E490974BE6DCCEF1 /* Pods-SegueRazerKit-SegueRazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueRazerKit-SegueRazer.release.xcconfig"; path = "Target Support Files/Pods-SegueRazerKit-SegueRazer/Pods-SegueRazerKit-SegueRazer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F05EFD922D1A9F800553F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				300B174587E8C13D51D23F8C /* Pods_SegueRazerKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F05EFF122D1AA8400553F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F05EFF922D1AA8400553F89 /* SegueRazerKit.framework in Frameworks */,
+				A4CC3F51E8DB72A86A177F7B /* Pods_SegueRazerKit_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD6ACCF20A3048000588105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F05EFE322D1A9F800553F89 /* SegueRazerKit.framework in Frameworks */,
+				814C2520AF2169C8503B714E /* Pods_SegueRazerKit_SegueRazer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F05EFDD22D1A9F800553F89 /* SegueRazerKit */ = {
+			isa = PBXGroup;
+			children = (
+				1F05EFDE22D1A9F800553F89 /* SegueRazer.h */,
+				1F05EFDF22D1A9F800553F89 /* Info.plist */,
+				1FEEAD1B22D2615500787A4A /* CommandHandler.swift */,
+				1F9BADAA20A43A1B00F940C4 /* Model.swift */,
+				1F7DBF6E20A578B500BDAA4B /* SegueRazer.swift */,
+				1F7DBF6620A5688400BDAA4B /* SeguesSupport.swift */,
+				1F9BADAC20A43ED100F940C4 /* Utility.swift */,
+				1FEEAD2322D2710F00787A4A /* DebuggingEncodable.swift */,
+			);
+			path = SegueRazerKit;
+			sourceTree = "<group>";
+		};
+		1F36710521020F6000E441DA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1F36710621020F6100E441DA /* Tests.swift */,
+				1F36710821020F6100E441DA /* Info.plist */,
+				1FEEAD1E22D264C000787A4A /* ProjectDirectory.h */,
+				1FEEAD1F22D264C000787A4A /* ProjectDirectory.m */,
+				1FEEAD1D22D264C000787A4A /* Tests-Bridging-Header.h */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		1FD6ACC920A3048000588105 = {
+			isa = PBXGroup;
+			children = (
+				1FD6ACD420A3048000588105 /* SegueRazer */,
+				1F05EFDD22D1A9F800553F89 /* SegueRazerKit */,
+				1F36710521020F6000E441DA /* Tests */,
+				BCEBAD332D0D76B636B3CA30 /* Frameworks */,
+				1FD6ACD320A3048000588105 /* Products */,
+				2A80E74C562D85488F18226B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		1FD6ACD320A3048000588105 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FD6ACD220A3048000588105 /* SegueRazer.app */,
+				1F05EFDC22D1A9F800553F89 /* SegueRazerKit.framework */,
+				1F05EFF422D1AA8400553F89 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FD6ACD420A3048000588105 /* SegueRazer */ = {
+			isa = PBXGroup;
+			children = (
+				1FD6ACD720A3048000588105 /* Assets.xcassets */,
+				1FD6ACDC20A3048000588105 /* Info.plist */,
+				1FD6ACE320A3049F00588105 /* main.swift */,
+			);
+			path = SegueRazer;
+			sourceTree = "<group>";
+		};
+		2A80E74C562D85488F18226B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D8B1A06763A54302754E327 /* Pods-SegueRazerKit.debug.xcconfig */,
+				2300C419FC4ED828C2B617B7 /* Pods-SegueRazerKit.release.xcconfig */,
+				1303A24ED6AE88617315F9BB /* Pods-SegueRazerKit-SegueRazer.debug.xcconfig */,
+				F4AC6669E490974BE6DCCEF1 /* Pods-SegueRazerKit-SegueRazer.release.xcconfig */,
+				27E9D39D6D447B7C7390C395 /* Pods-SegueRazerKit-Tests.debug.xcconfig */,
+				1C83E64ADDCD2DC35AAEF05F /* Pods-SegueRazerKit-Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BCEBAD332D0D76B636B3CA30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				959B347DBF389FB5DB2D1AD3 /* Pods_SegueRazerKit.framework */,
+				220321FFF6BB23B1C9EE9C5F /* Pods_SegueRazerKit_SegueRazer.framework */,
+				3BC57E9A48C2496C78EAF598 /* Pods_SegueRazerKit_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1F05EFD722D1A9F800553F89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F05EFE022D1A9F800553F89 /* SegueRazer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1F05EFDB22D1A9F800553F89 /* SegueRazerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F05EFE722D1A9F800553F89 /* Build configuration list for PBXNativeTarget "SegueRazerKit" */;
+			buildPhases = (
+				F6059F89CE88357817574839 /* [CP] Check Pods Manifest.lock */,
+				1F05EFD722D1A9F800553F89 /* Headers */,
+				1F05EFD822D1A9F800553F89 /* Sources */,
+				1F05EFD922D1A9F800553F89 /* Frameworks */,
+				1FDA98CD22D1D35E00AAF5D6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SegueRazerKit;
+			productName = RemoveSegueKit;
+			productReference = 1F05EFDC22D1A9F800553F89 /* SegueRazerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1F05EFF322D1AA8400553F89 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F05EFFC22D1AA8400553F89 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				C79B85070C6FDA85FDDE87C9 /* [CP] Check Pods Manifest.lock */,
+				1F05EFF022D1AA8400553F89 /* Sources */,
+				1F05EFF122D1AA8400553F89 /* Frameworks */,
+				1F05EFF222D1AA8400553F89 /* Resources */,
+				C3502ED7CEFAC06B6EC32094 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F05EFFB22D1AA8400553F89 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 1F05EFF422D1AA8400553F89 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FD6ACD120A3048000588105 /* SegueRazer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FD6ACE020A3048000588105 /* Build configuration list for PBXNativeTarget "SegueRazer" */;
+			buildPhases = (
+				B5EA0DF0CBE3601CC44B96AD /* [CP] Check Pods Manifest.lock */,
+				1FD6ACCE20A3048000588105 /* Sources */,
+				1FD6ACCF20A3048000588105 /* Frameworks */,
+				1FD6ACD020A3048000588105 /* Resources */,
+				1F05EFE822D1A9F800553F89 /* Embed Frameworks */,
+				C24FAAB1949968101493C022 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F05EFE222D1A9F800553F89 /* PBXTargetDependency */,
+			);
+			name = SegueRazer;
+			productName = RemoveSegue;
+			productReference = 1FD6ACD220A3048000588105 /* SegueRazer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FD6ACCA20A3048000588105 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = szotp;
+				TargetAttributes = {
+					1F05EFDB22D1A9F800553F89 = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					1F05EFF322D1AA8400553F89 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+					};
+					1FD6ACD120A3048000588105 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1FD6ACCD20A3048000588105 /* Build configuration list for PBXProject "SegueRazer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FD6ACC920A3048000588105;
+			productRefGroup = 1FD6ACD320A3048000588105 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FD6ACD120A3048000588105 /* SegueRazer */,
+				1F05EFDB22D1A9F800553F89 /* SegueRazerKit */,
+				1F05EFF322D1AA8400553F89 /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F05EFF222D1AA8400553F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD6ACD020A3048000588105 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD6ACD820A3048000588105 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5EA0DF0CBE3601CC44B96AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SegueRazerKit-SegueRazer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C24FAAB1949968101493C022 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SegueRazerKit-SegueRazer/Pods-SegueRazerKit-SegueRazer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftShell/SwiftShell.framework",
+				"${BUILT_PRODUCTS_DIR}/xcodeproj/xcodeproj.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PathKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftShell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/xcodeproj.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SegueRazerKit-SegueRazer/Pods-SegueRazerKit-SegueRazer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3502ED7CEFAC06B6EC32094 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SegueRazerKit-Tests/Pods-SegueRazerKit-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftShell/SwiftShell.framework",
+				"${BUILT_PRODUCTS_DIR}/xcodeproj/xcodeproj.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PathKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftShell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/xcodeproj.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SegueRazerKit-Tests/Pods-SegueRazerKit-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C79B85070C6FDA85FDDE87C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SegueRazerKit-Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6059F89CE88357817574839 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SegueRazerKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F05EFD822D1A9F800553F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFDFF6122D1D2D00049C885 /* SeguesSupport.swift in Sources */,
+				1FEEAD2422D2710F00787A4A /* DebuggingEncodable.swift in Sources */,
+				1FEEAD2522D2756000787A4A /* CommandHandler.swift in Sources */,
+				1F05EFEB22D1AA0F00553F89 /* Model.swift in Sources */,
+				1F05EFEA22D1AA0F00553F89 /* Utility.swift in Sources */,
+				1F05EFE922D1AA0F00553F89 /* SegueRazer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F05EFF022D1AA8400553F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F05EFFF22D1AC8C00553F89 /* Tests.swift in Sources */,
+				1FEEAD2022D264C000787A4A /* ProjectDirectory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FD6ACCE20A3048000588105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD6ACE420A3049F00588105 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F05EFE222D1A9F800553F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F05EFDB22D1A9F800553F89 /* SegueRazerKit */;
+			targetProxy = 1F05EFE122D1A9F800553F89 /* PBXContainerItemProxy */;
+		};
+		1F05EFFB22D1AA8400553F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F05EFDB22D1A9F800553F89 /* SegueRazerKit */;
+			targetProxy = 1F05EFFA22D1AA8400553F89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1F05EFE522D1A9F800553F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D8B1A06763A54302754E327 /* Pods-SegueRazerKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SegueRazerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = szotp.SegueRazerKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1F05EFE622D1A9F800553F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2300C419FC4ED828C2B617B7 /* Pods-SegueRazerKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SegueRazerKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = szotp.SegueRazerKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1F05EFFD22D1AA8400553F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E9D39D6D447B7C7390C395 /* Pods-SegueRazerKit-Tests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"PROJECT_DIR=@\\\"${PROJECT_DIR}\\\"",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AEXML/AEXML.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PathKit/PathKit.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftShell/SwiftShell.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/xcodeproj/xcodeproj.framework/Headers\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AEXML\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PathKit\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftShell\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/xcodeproj\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pszot.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		1F05EFFE22D1AA8400553F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C83E64ADDCD2DC35AAEF05F /* Pods-SegueRazerKit-Tests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"PROJECT_DIR=@\\\"${PROJECT_DIR}\\\"",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AEXML/AEXML.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PathKit/PathKit.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftShell/SwiftShell.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/xcodeproj/xcodeproj.framework/Headers\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AEXML\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PathKit\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftShell\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/xcodeproj\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pszot.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		1FD6ACDE20A3048000588105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1FD6ACDF20A3048000588105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		1FD6ACE120A3048000588105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1303A24ED6AE88617315F9BB /* Pods-SegueRazerKit-SegueRazer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SegueRazer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = szotp.SegueRazer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		1FD6ACE220A3048000588105 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4AC6669E490974BE6DCCEF1 /* Pods-SegueRazerKit-SegueRazer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SegueRazer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = szotp.SegueRazer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F05EFE722D1A9F800553F89 /* Build configuration list for PBXNativeTarget "SegueRazerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F05EFE522D1A9F800553F89 /* Debug */,
+				1F05EFE622D1A9F800553F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F05EFFC22D1AA8400553F89 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F05EFFD22D1AA8400553F89 /* Debug */,
+				1F05EFFE22D1AA8400553F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD6ACCD20A3048000588105 /* Build configuration list for PBXProject "SegueRazer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD6ACDE20A3048000588105 /* Debug */,
+				1FD6ACDF20A3048000588105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FD6ACE020A3048000588105 /* Build configuration list for PBXNativeTarget "SegueRazer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FD6ACE120A3048000588105 /* Debug */,
+				1FD6ACE220A3048000588105 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FD6ACCA20A3048000588105 /* Project object */;
+}
