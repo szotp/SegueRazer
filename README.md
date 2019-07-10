@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/szotp/SegueRazer.svg?branch=master)](https://travis-ci.org/szotp/SegueRazer)
+
 ```
 SegueRazer
 Razes navigation segues from storyboards and replaces them with explicit instantiation.
