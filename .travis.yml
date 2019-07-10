@@ -1,0 +1,9 @@
+language: swift
+osx_image: xcode10.2
+
+before_install:
+- gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+
+script:
+- pod install
+- set -o pipefail && xcodebuild -scheme SegueRazer test | xcpretty -c
