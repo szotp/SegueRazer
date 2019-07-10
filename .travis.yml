@@ -6,4 +6,4 @@ before_install:
 
 script:
 - pod install
-- set -o pipefail && xcodebuild -scheme SegueRazer test | xcpretty -c
+- set -o pipefail && xcodebuild -workspace SegueRazer.xcworkspace -scheme SegueRazer test | xcpretty -c

@@ -131,6 +131,10 @@ class InstantiateBuilder {
     var dict: [String: [ViewControllerSceneContent]] = [:]
     
     func getMethodName(scene: ViewControllerSceneContent) -> String {
+        if scene.viewControllerClass.hasPrefix("UI") {
+            return getInternalMethodCall(scene: scene)
+        }
+        
         var scenes = dict[scene.viewControllerClass] ?? []
         
         let index: Int
@@ -146,11 +150,7 @@ class InstantiateBuilder {
         _ = index
         
         var suffix = ""
-        
-        if scene.viewControllerClass == "UIViewController" {
-            suffix = "VC"
-        }
-        
+
         if scene.viewControllerClass.hasSuffix("NavigationController") {
             suffix = "With"
         }
@@ -167,14 +167,19 @@ class InstantiateBuilder {
         return scene.viewControllerClass + "." + getMethodName(scene: scene)
     }
     
+    func getInternalMethodCall(scene: ViewControllerSceneContent) -> String {
+        return "instantiate(identifier: \"\(scene.storyboardIdentifier!)\", storyboardName: \"\(scene.storyboardName)\")"
+    }
+    
     func insertExtensions(writer: SourceWriter) {
-        for (name, scenes) in dict {
+        for name in dict.keys.sorted() {
+            let scenes = dict[name]!
             writer.beginExtension(name: name)
             
             for scene in scenes {
                 writer.append("static func \(getMethodName(scene: scene)) -> Self {")
                 writer.begin()
-                writer.append("return instantiate(identifier: \"\(scene.storyboardIdentifier!)\", storyboardName: \"\(scene.storyboardName)\")")
+                writer.append("return " + getInternalMethodCall(scene: scene))
                 writer.end()
                 writer.append("}")
             }
@@ -318,8 +323,6 @@ class SegueNodeWorker {
             } else {
                 writer.append("_ = tempPrepareSegue(identifier: \(segueIdentifier), destination: vc, sender: sender)")
             }
-
-            writer.append("_ = tempPrepareSegue(identifier: \(segueIdentifier), destination: vc, sender: sender)")
         }
         
         switch segue.kind {
@@ -421,9 +424,14 @@ class SegueConverter {
     }
     
     func insertExtensions() {
+        workers.sort { lhs, rhs in
+            lhs.methodName < rhs.methodName
+        }
+        
         let grouped = Dictionary(grouping: workers, by: { $0.vcClass })
         
-        for (vcName, group) in grouped {
+        for vcName in grouped.keys.sorted() {
+            let group = grouped[vcName]!
             writer.beginExtension(name: vcName)
             
             for segue in group {

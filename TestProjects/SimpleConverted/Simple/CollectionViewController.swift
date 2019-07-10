@@ -34,8 +34,7 @@ extension CollectionViewController {
 extension CollectionViewController {
   @IBAction func navigateToUIViewController1(_ sender: Any?) {
     //<segue destination="zBe-u6-SoS" kind="show" id="HCu-w1-egU"/>
-    let vc = UIViewController.instantiateVC1()
-    _ = tempPrepareSegue(identifier: "", destination: vc, sender: sender)
+    let vc = UIViewController.instantiate(identifier: "UIViewController1", storyboardName: "Main")
     _ = tempPrepareSegue(identifier: "", destination: vc, sender: sender)
     show(vc, sender: self)
   }

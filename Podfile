@@ -5,6 +5,7 @@ target 'SegueRazerKit' do
   use_frameworks!
 
   pod 'xcodeproj'
+  pod 'SwiftShell'
   
   target 'SegueRazer' do
   end
